@@ -14,6 +14,9 @@ class Board
 
     def insert(value, index)
         depth = 0
+        if index > 6
+            return false
+        end
         if(self.board[0][index] == nil)
             while(self.board[depth + 1][index] == nil)
                 depth += 1
