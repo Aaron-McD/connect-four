@@ -1,13 +1,23 @@
 require_relative "lib/game.rb"
 
 # Example code to run the game and work with the API
+$symbols = []
 
-=begin
+def get_symbol
+    input = gets.chomp
+    while input.length > 1 || $symbols.include?(input)
+        puts "Please just enter a single character that has not been used: "
+        input = gets.chomp
+    end
+    $symbols.append(input)
+    return input
+end
+
 puts "Please enter the single character symbol for player one: "
 player1 = get_symbol
 puts "Please enter the single character symbol for player two: "
 player2 = get_symbol
-=end
+
 player1 = "r"
 player2 = "b"
 

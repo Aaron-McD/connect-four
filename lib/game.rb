@@ -91,7 +91,7 @@ class Game
                 break
             end
         end
-        return amount == 4
+        return amount >= 4
     end
 
     def four_verticle?
@@ -115,7 +115,7 @@ class Game
                 break
             end
         end
-        return amount == 4
+        return amount >= 4
     end
 
     def four_diagonal?
@@ -165,9 +165,9 @@ class Game
                 break
             end
         end
-        if amount_left_to_right == 4
+        if amount_left_to_right >= 4
             return true
-        elsif amount_right_to_left == 4
+        elsif amount_right_to_left >= 4
             return true
         else
             return false
